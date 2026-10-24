@@ -66,8 +66,8 @@ Positive bias means the forecast overestimated actual generation.
 
 ## Links
 
-- **GitHub:** `<ADD_REPOSITORY_URL>`
-- **Live app:** `<ADD_DEPLOYED_APP_URL>`
+- **GitHub:** `https://github.com/shreepaada/wind-analytics-k7p4xx`
+- **Live app:** `https://wind-analytics-k7p4xx.vercel.app`
 - **Demo video:** `<ADD_UNLISTED_YOUTUBE_URL>`
 
 The application has not yet been deployed. Add the live URL after deployment and testing.
