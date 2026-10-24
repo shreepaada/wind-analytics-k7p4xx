@@ -250,7 +250,17 @@ label: new Date(row.startTime).toLocaleString("en-GB", {
                       <td className="time-cell">{formatTime(row.startTime)}</td><td>{formatTime(row.publishTime)}</td>
                       <td>{formatNumber(row.forecastMW)}</td><td>{formatNumber(row.actualMW)}</td>
                       <td className={row.errorMW > 0 ? "error-positive" : row.errorMW < 0 ? "error-negative" : ""}>{row.errorMW == null ? "—" : `${row.errorMW > 0 ? "+" : ""}${formatNumber(row.errorMW)}`}</td>
-                      <td>{row.errorMW == null ? <span className="status missing">No match</span> : Math.abs(row.errorMW) < 500 ? <span className="status good">Within 500 MW</span> : <span className="status review">Review error</span>}</td>
+                      <td>
+  {row.errorMW == null ? (
+    <span className="status missing">No match</span>
+  ) : Math.abs(row.errorMW) < 500 ? (
+    <span className="status good">Close match</span>
+  ) : row.errorMW > 0 ? (
+    <span className="status review">Overforecast</span>
+  ) : (
+    <span className="status review">Underforecast</span>
+  )}
+</td>
                     </tr>
                   ))}</tbody>
                 </table>
